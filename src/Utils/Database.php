@@ -3,6 +3,7 @@
 namespace App\Utils;
 
 use PDO;
+use RuntimeException;
 
 class Database {
     private static ?PDO $pdo = null;

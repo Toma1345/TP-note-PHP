@@ -1,25 +1,32 @@
 <?php
+session_start();
 
-require_once __DIR__ . '/../src/Utils/Autoloader.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'])) {
+    $_SESSION['username'] = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
 
-use App\Utils\Autoloader;
-use App\Controllers\QuizController;
-
-Autoloader::register();
-
-$action = $_GET['action'] ?? 'quiz';
-
-switch ($action) {
-    case 'quiz':
-        QuizController::showQuiz();
-        break;
-    case 'check':
-        QuizController::checkAnswers();
-        break;
-    case 'results':
-        QuizController::showResults();
-        break;
-    default:
-        echo "Action non reconnue.";
-        break;
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit;
 }
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion au Quiz</title>
+</head>
+<body>
+    <h1>Bienvenue sur le Quiz</h1>
+    <form method="POST" action="manager.php?action=quiz">
+        <label for="username">Entrez votre nom d'utilisateur :</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Commencer</button>
+    </form>    
+    <form>
+        <label for="fileInput">Choisissez un fichier JSON :</label>
+        <input type="file" id="fileInput" accept=".json">
+        <button type="submit">Envoyer au script PHP</button>    
+    </form>
+</body>
+</html>

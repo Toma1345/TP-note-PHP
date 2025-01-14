@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'])) {
         input[type="file"] {
             margin: 15px 0;
             padding: 10px;
-            width: 100%;
+            width: 90%;
             border: 1px solid #ccc;
             border-radius: 4px;
         }

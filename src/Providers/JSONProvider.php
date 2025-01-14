@@ -16,4 +16,18 @@ class JSONProvider {
             return $data;
         }
     }
+
+    public static function validate($data) {
+        if (!isset($data['title'], $data['questions'])) {
+            throw new Exception("Fichier JSON invalide : titre ou questions manquants.");
+        }
+    
+        foreach ($data['questions'] as $q) {
+            if (!isset($q['text'], $q['choices'], $q['answer'])) {
+                throw new Exception("Fichier JSON invalide : une ou plusieurs questions sont mal formatées.");
+            }
+        }
+        return true;
+    }
+    
 }

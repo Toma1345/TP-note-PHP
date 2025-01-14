@@ -18,15 +18,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'])) {
 </head>
 <body>
     <h1>Bienvenue sur le Quiz</h1>
-    <form method="POST" action="manager.php?action=quiz">
-        <label for="username">Entrez votre nom d'utilisateur :</label>
-        <input type="text" id="username" name="username" required>
-        <button type="submit">Commencer</button>
-    </form>    
-    <form>
-        <label for="fileInput">Choisissez un fichier JSON :</label>
-        <input type="file" id="fileInput" accept=".json">
-        <button type="submit">Envoyer au script PHP</button>    
+    <form method="POST" action="manager.php?action=upload" enctype="multipart/form-data">
+    <label for="username">Entrez votre nom d'utilisateur :</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="fileInput">Choisissez un fichier JSON :</label>
+    <input type="file" id="fileInput" name="quizFile" accept=".json" required>
+    
+    <button type="submit">Commencer</button>
     </form>
 </body>
 </html>

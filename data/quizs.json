@@ -1,0 +1,55 @@
+{
+    "title": "Nouveau Quiz de Démo",
+    "questions": [
+        {
+            "text": "Quel est le plus grand désert du monde ?",
+            "choices": ["Désert du Sahara", "Désert de Gobi", "Antarctique", "Désert d'Atacama"],
+            "answer": "Antarctique"
+        },
+        {
+            "text": "Quelle est la formule chimique du dioxyde de carbone ?",
+            "choices": ["CO", "CO2", "CH4", "C2O"],
+            "answer": "CO2"
+        },
+        {
+            "text": "Quelle est la langue officielle du Brésil ?",
+            "choices": ["Espagnol", "Portugais", "Français", "Anglais"],
+            "answer": "Portugais"
+        },
+        {
+            "text": "Combien de jours y a-t-il dans une année bissextile ?",
+            "choices": ["364", "365", "366", "367"],
+            "answer": "366"
+        },
+        {
+            "text": "Qui a écrit \"Roméo et Juliette\" ?",
+            "choices": ["William Shakespeare", "Victor Hugo", "Molière", "Charles Dickens"],
+            "answer": "William Shakespeare"
+        },
+        {
+            "text": "Quelle est la distance moyenne entre la Terre et la Lune ?",
+            "choices": ["150 000 km", "384 400 km", "450 000 km", "1 000 000 km"],
+            "answer": "384 400 km"
+        },
+        {
+            "text": "Quelle est la monnaie officielle du Japon ?",
+            "choices": ["Yuan", "Won", "Dollar", "Yen"],
+            "answer": "Yen"
+        },
+        {
+            "text": "Quel est l'organe principal du système nerveux ?",
+            "choices": ["Le cœur", "Le foie", "Le cerveau", "Les poumons"],
+            "answer": "Le cerveau"
+        },
+        {
+            "text": "Quel est le plus long fleuve du monde ?",
+            "choices": ["Nil", "Amazonie", "Yangzi Jiang", "Mississippi"],
+            "answer": "Amazonie"
+        },
+        {
+            "text": "Qui est le créateur de Microsoft ?",
+            "choices": ["Steve Jobs", "Bill Gates", "Elon Musk", "Mark Zuckerberg"],
+            "answer": "Bill Gates"
+        }
+    ]
+}

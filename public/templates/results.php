@@ -12,6 +12,6 @@ session_start();
 <body>
     <h1>Résultats</h1>
     <p>Votre score est : <?= $_SESSION['score'] ?? 0; ?></p>
-    <a href="index.php?action=quiz">Recommencer</a>
+    <a href="index.php">Recommencer</a>
 </body>
 </html>

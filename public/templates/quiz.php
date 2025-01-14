@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'])) {
 <body>
     <h1><?= $quiz->getTitle() ?></h1>
     <p>Bienvenue, <strong><?= htmlspecialchars($_SESSION['username'], ENT_QUOTES, 'UTF-8') ?></strong> !</p>
-    <form method="POST" action="index.php?action=check">
+    <form method="POST" action="manager.php?action=check">
         <?php foreach ($quiz->getQuestions() as $index => $question): ?>
             <fieldset>
                 <legend><?= $question->getText() ?></legend>

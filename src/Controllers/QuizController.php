@@ -37,7 +37,7 @@ class QuizController {
         // Enregistrement dans la base de données
         ScoreManager::saveUserScore($_SESSION['username'], $score);
 
-        header('Location: index.php?action=results');
+        header('Location: manager.php?action=results');
     }
 
     public static function showResults() {

@@ -11,7 +11,7 @@ session_start();
 </head>
 <body>
     <h1>Résultats</h1>
-    <p>Votre score est : <?= $_SESSION['score'] ?? 0; ?></p>
+    <p>Votre score est : <?= $_SESSION['score'] ?? 0; ?> / <?= $_SESSION['nbquestions'] ?? 0; ?></p>
     <a href="index.php">Recommencer</a>
 </body>
 </html>

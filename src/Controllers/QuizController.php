@@ -40,13 +40,16 @@ class QuizController {
         $correctAnswers = array_map(fn($q) => $q['answer'], $data['questions']);
 
         $score = 0;
+        $nbq = 0;
         foreach ($answers as $index => $answer) {
+            $nbq++;
             if ($answer === $correctAnswers[$index]) {
                 $score++;
             }
         }
 
         $_SESSION['score'] = $score;
+        $_SESSION['nbquestions'] = $nbq;
 
         // Enregistrement dans la base de données
         ScoreManager::saveUserScore($_SESSION['username'], $score);
